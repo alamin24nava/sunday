@@ -1,38 +1,207 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+:root{
+  --primary:#375d3c;
+  --white:#ffffff;
+  --dark:#303030;
+  --secondary:#707070;
+}
+h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+.text-dark{
+  color: var(--dark) !important;
+}
+.text-secondary{
+  color: var(--secondary) !important;
+}
+.fw-bold{
+  font-weight: 700 !important;
+}
+.fw-medium{
+  font-weight: 500 !important;
+}
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 156px;
+}
+.container {
+  max-width: 767px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.brand-logo{
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+  display: block;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.img-fluid{
+  max-width: 100%;
+  height: auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.title-lg {
+  font-size: 42px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 3px;
+}
+.title {
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 500;
+  color: var(--dark);
+}
+.table-details {
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 500;
+  color: var(--dark);
+  padding: 4px 8px;
+}
+.des {
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 400;
+  color: var(--dark);
+}
+.btn-group {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 20px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-dark {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
+}
+.w-100{
+  width: 100%;
+}
+/* App Header */
+.app-header {
+  margin-bottom: 12px;
+  padding: 12px 0;
+}
+.app-header-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Auth */
+.auth {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dfdfdf;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  gap: 4px;
+  font-weight: 500;
+  line-height: 1;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  text-decoration: none;
+  color: var(--dark);
+}
+
+/* Banner style here... */
+.app-banner-inner {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: var(--primary);
+  min-height: 180px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.span-up{
+  font-weight: 300;
 }
 
-.App-link {
-  color: #61dafb;
+/* Bill Pay style here.. */
+.app-bill-pay {
+  padding: 24px 0;
+}
+.table{
+  width: 100%;
+}
+.total-bill-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #d2d2d2;
+  padding-bottom: 8px;
+}
+.table-details:first-child{
+  text-align: start;
+  padding-left: 0;
+  padding-right: 2px;
+}
+.table-details:nth-last-child(-n + 2){
+  text-align: end;
+  padding-right: 0;
+}
+.bill-tax-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+  border-top: 1px solid #d2d2d2;
+  padding-top: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+  .btn-group {
+    gap: 12px;
+    flex-direction: column;
+}
 }
